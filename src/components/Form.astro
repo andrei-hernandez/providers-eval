@@ -1,0 +1,220 @@
+---
+import RangeSlider from "./RangeSlider.astro";
+---
+
+<section class="w-2xl">
+  <form class="flex flex-col gap-5">
+    <div
+      class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+    >
+      <h1 class="mb-5 text-xl">AT/R-M8.4-02 Evaluación de proveedores</h1>
+      <h2 class="mb-5 text-lg">Instrucciones de llenado</h2>
+      <ol
+        class="max-w-md space-y-1 text-gray-500 list-decimal list-inside dark:text-gray-400"
+      >
+        <li>
+          <span>
+            Llenar el encabezado del formulario con los datos del evento.
+          </span>
+        </li>
+        <li>
+          <span>
+            Asignar el valor que considere adecuado en cada criterio
+            considerando <strong
+              class="font-medium text-gray-900 dark:text-white">1</strong
+            > como malo,
+            <strong class="font-medium text-gray-900 dark:text-white">2</strong>
+            como regular y <strong
+              class="font-medium text-gray-900 dark:text-white">3</strong
+            > como bueno y <strong
+              class="font-medium text-gray-900 dark:text-white">N/A</strong
+            > en caso de no aplicar.
+          </span>
+        </li>
+      </ol>
+    </div>
+    <div
+      class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+    >
+      <h2 class="mb-5 text-xl">Información básica</h2>
+      <div class="mb-5">
+        <label for="base-input" class="block mb-2 text-sm font-medium"
+          >Fecha de evaluación</label
+        >
+        <input
+          type="date"
+          id="base-input"
+          class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-5">
+        <label for="base-input" class="block mb-2 text-sm font-medium"
+          >Evento</label
+        >
+        <input
+          type="text"
+          id="base-input"
+          class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-5">
+        <label for="base-input" class="block mb-2 text-sm font-medium"
+          >Proveedor a evaluar</label
+        >
+        <input
+          type="text"
+          id="base-input"
+          class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+      <div class="mb-5">
+        <label for="base-input" class="block mb-2 text-sm font-medium"
+          >Servicio a evaluar</label
+        >
+        <input
+          type="text"
+          id="base-input"
+          class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        />
+      </div>
+    </div>
+    <div
+      class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+    >
+      <h3 class="mb-5 text-xl">Criterios de evaluación</h3>
+      <RangeSlider inputLabel="Limpieza" />
+      <RangeSlider inputLabel="Temperatura" />
+      <RangeSlider inputLabel="Iluminación" />
+      <RangeSlider inputLabel="Odorización" />
+      <RangeSlider inputLabel="Mobiliario" />
+      <RangeSlider inputLabel="Estado de instalaciones" />
+      <RangeSlider inputLabel="Instalación eléctrica" />
+      <RangeSlider inputLabel="Calidad de impresión" />
+      <RangeSlider inputLabel="Estructuras" />
+      <RangeSlider inputLabel="Presentación (Alimentos y Bebidas)" />
+      <RangeSlider inputLabel="Higiene (Alimentos y Bebidas)" />
+      <RangeSlider inputLabel="Puntualidad de entrega en producto/servicio" />
+      <RangeSlider inputLabel="Cantidad correcta de producto/servicio" />
+      <RangeSlider inputLabel="Rapidez en tiempos de respuesta" />
+      <RangeSlider inputLabel="Actitud de servicio" />
+      <RangeSlider inputLabel="Flexibilidad en solicitudes adicionales" />
+      <RangeSlider inputLabel="Capacidad de atención a inconvenientes" />
+    </div>
+    <div
+      class="w-full flex flex-row-reverse p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+    >
+      <div class="stats shadow">
+        <div class="stat">
+          <div class="stat-title">Puntaje total</div>
+          <div class="stat-value">70%</div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+    >
+      <div class="mb-5">
+        <label for="message" class="block mb-2 text-sm font-medium"
+          >Observaciones</label
+        >
+        <textarea
+          id="message"
+          rows="4"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Leave a comment..."></textarea>
+      </div>
+
+      <div class="mb-5 flex flex-row gap-5">
+        <div class="flex-auto">
+          <label
+            for="countries"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Area que evalúa</label
+          >
+          <select
+            id="countries"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option>Area 1</option>
+            <option>Area 2</option>
+            <option>Area 3</option>
+            <option>Area 4</option>
+          </select>
+        </div>
+        <div class="flex-auto">
+          <label for="base-input" class="block mb-2 text-sm font-medium"
+            >Nombre de quien evalúa</label
+          >
+          <input
+            type="text"
+            id="base-input"
+            class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 pt-2 py-[9px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </div>
+      </div>
+      <div>
+        <h2 class="mb-5 text-xl">Calificación</h2>
+        <ul
+          class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400"
+        >
+          <li class="flex items-center">
+            <svg
+              class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 shrink-0"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+              ></path>
+            </svg>
+            De 0 a 40 puntos: el proveedor es malo
+          </li>
+          <li class="flex items-center">
+            <svg
+              class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 shrink-0"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+              ></path>
+            </svg>
+            De 41 a 60 puntos: el proveedor es regular
+          </li>
+          <li class="flex items-center">
+            <svg
+              class="w-3.5 h-3.5 me-2 text-gray-500 dark:text-gray-400 shrink-0"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+              ></path>
+            </svg>
+            De 61 a 80 puntos: el proveedor es bueno
+          </li>
+          <li class="flex items-center">
+            <svg
+              class="w-3.5 h-3.5 me-2 text-gray-500 dark:text-gray-400 shrink-0"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"
+              ></path>
+            </svg>
+            De 81 a 100 puntos: el proveedor es excelente
+          </li>
+        </ul>
+      </div>
+    </div>
+  </form>
+</section>

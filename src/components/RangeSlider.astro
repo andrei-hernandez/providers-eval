@@ -1,0 +1,25 @@
+---
+const { inputLabel } = Astro.props;
+---
+
+<div class="w-full mb-5">
+  <label>
+    <label for="base-input" class="block mb-2 text-sm font-medium"
+      >{inputLabel}</label
+    >
+  </label>
+  <input
+    type="range"
+    min="0"
+    max="3"
+    value="0"
+    step="1"
+    class="w-full range range-sm range-primary"
+  />
+  <div class="w-full flex justify-between mt-2 text-xs">
+    <span>N/A</span>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+  </div>
+</div>
