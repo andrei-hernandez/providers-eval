@@ -71,11 +71,19 @@ import RangeSlider from "./RangeSlider.astro";
         <label for="base-input" class="block mb-2 text-sm font-medium"
           >Servicio a evaluar</label
         >
-        <input
-          type="text"
-          id="base-input"
-          class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        />
+        <select
+          id="countries"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        >
+          <option>Hospedaje</option>
+          <option>Recinto</option>
+          <option>Alimentos y bebidas</option>
+          <option>Audio y video</option>
+          <option>Expocomercial</option>
+          <option>Transporte</option>
+          <option>Escenografía</option>
+          <option>Otro</option>
+        </select>
       </div>
     </div>
     <div
@@ -135,10 +143,8 @@ import RangeSlider from "./RangeSlider.astro";
             id="countries"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           >
-            <option>Area 1</option>
-            <option>Area 2</option>
-            <option>Area 3</option>
-            <option>Area 4</option>
+            <option>Logística</option>
+            <option>Alimentos y bebidas</option>
           </select>
         </div>
         <div class="flex-auto">
