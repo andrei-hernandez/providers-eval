@@ -53,8 +53,6 @@ export const EvaluationForm: React.FC = () => {
     saveEvaluation(evaluationData)
   }
 
-  console.log('scorePercentage', scorePercentage)
-
   return (
     <div className="w-full flex flex-col lg:flex-row justify-center gap-5">
       <form className="flex flex-col gap-5 w-2xl">

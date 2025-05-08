@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro'
+import React from 'react'
+---
+
+<Layout>
+  <section>
+    <form>
+      <div
+        class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+      >
+        <h2 class="mb-5 text-xl">Admin data</h2>
+        <div class="mb-5">
+          <label for="evaluation-date" class="block mb-2 text-sm font-medium">
+            Fecha de evaluación
+          </label>
+          <input
+            type="date"
+            id="evaluation-date"
+            name="evaluationDate"
+            autocomplete="off"
+            class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </div>
+        <div class="mb-5">
+          <label for="event-name" class="block mb-2 text-sm font-medium">
+            Evento
+          </label>
+          <input
+            type="text"
+            id="event-name"
+            name="eventName"
+            autocomplete="off"
+            class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </div>
+        <div class="mb-5">
+          <label
+            for="provider-to-evaluate"
+            class="block mb-2 text-sm font-medium"
+          >
+            Proveedor a evaluar
+          </label>
+          <input
+            type="text"
+            id="provider-to-evaluate"
+            name="providerToEvaluate"
+            autocomplete="off"
+            class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </div>
+        <div class="mb-5">
+          <label
+            for="service-to-evaluate"
+            class="block mb-2 text-sm font-medium"
+          >
+            Servicio a evaluar
+          </label>
+          <select
+            id="service-to-evaluate"
+            name="serviceToEvaluate"
+            autocomplete="off"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option>Hospedaje</option>
+            <option>Recinto</option>
+            <option>Alimentos y bebidas</option>
+            <option>Audio y video</option>
+            <option>Expocomercial</option>
+            <option>Transporte</option>
+            <option>Escenografía</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="mb-5 flex flex-row gap-5">
+          <div class="flex-auto">
+            <label
+              for="countries"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >
+              Area que evalúa
+            </label>
+            <select
+              id="countries"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option>Logística</option>
+              <option>Alimentos y bebidas</option>
+            </select>
+          </div>
+          <div class="flex-auto">
+            <label for="base-input" class="block mb-2 text-sm font-medium">
+              Nombre de quien evalúa
+            </label>
+            <input
+              type="text"
+              id="base-input"
+              class="bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2.5 pt-2 py-[9px] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+</Layout>

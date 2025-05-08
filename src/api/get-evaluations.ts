@@ -1,7 +1,7 @@
-import { DATA_STORAGE_KEY } from "../shared/constants.ts";
+import { DATA_STORAGE_KEYS } from "../shared/constants.ts";
 
 export const getEvaluations = (): EvaluationData[] => {
-  const evaluations = localStorage.getItem(DATA_STORAGE_KEY);
+  const evaluations = localStorage.getItem(DATA_STORAGE_KEYS.EVALUATIONS);
   if (evaluations) {
     return JSON.parse(evaluations);
   }
