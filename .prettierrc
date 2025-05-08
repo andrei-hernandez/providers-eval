@@ -4,7 +4,23 @@
     {
       "files": "*.astro",
       "options": {
-        "parser": "astro"
+        "parser": "astro",
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "printWidth": 80,
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.tsx",
+      "options": {
+        "parser": "typescript",
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "printWidth": 80,
+        "tabWidth": 2
       }
     }
   ]

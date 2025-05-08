@@ -1,5 +1,6 @@
 ---
-import "../styles/global.css";
+import '../styles/global.css'
+import { ClientRouter, fade, slide } from 'astro:transitions'
 ---
 
 <!doctype html>
@@ -10,11 +11,16 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
+    <ClientRouter />
   </head>
   <body
     class="bg-amber-50 dark:bg-gray-900 text-gray-900 dark:text-white font-medium w-full h-full"
   >
-    <slot />
+    <main
+      class="bg-amber-50 dark:bg-gray-900 w-full min-h-screen py-16 flex flex-col items-center justify-center"
+    >
+      <slot />
+    </main>
   </body>
 </html>
 

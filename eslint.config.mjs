@@ -1,16 +1,22 @@
 import eslintPluginAstro from "eslint-plugin-astro";
 
 const eslintConfig = [
-  // add more generic rule sets here, such as:
-  // js.configs.recommended,
   {
     ignores: ["node_modules", ".astro"],
   },
   ...eslintPluginAstro.configs.recommended,
   {
+    files: ["*.astro", "*.tsx"],
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: 2021,
+        sourceType: "module",
+      },
+    },
+    processor: "astro/client-side-ts", // Uses the "client-side-ts" processor.
     rules: {
-      // override/add rules settings here, such as:
       "astro/no-set-html-directive": "error",
+      semi: ["error", "never"],
     },
   },
 ];

@@ -1,15 +1,8 @@
 ---
-import Form from "../components/Form.astro";
-import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '../layouts/Layout.astro'
+import { EvaluationsList } from '../components/react/evaluations-list'
 ---
 
 <Layout>
-  <main
-    class="bg-amber-50 dark:bg-gray-900 w-full min-h-screen py-16 flex flex-col items-center justify-center"
-  >
-    <Form />
-  </main>
+  <EvaluationsList client:only="react" />
 </Layout>
